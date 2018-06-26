@@ -1,0 +1,111 @@
+<!DOCtype html>
+<!-- Tells the browser that this is a HTML file -->
+<!--ctrl + / can be used to comment something out-->
+<hmtl>
+    <!-- initialise HTML elements -->
+
+    <head>
+        <!-- Links are going to be included in the head section won't be seen in a browser -->
+
+        <title> Planetary Alingment </title>
+        <!-- title of tab-->
+
+        <meta charset="utf-8" />
+        <!-- meta has no closing tag just />-->
+        <!--this tag allows you to add (@&!?etc.)-->
+
+        <meta http-equiv="content-type" content="text/html" />
+        <!--specifies content as HTML -->
+
+        <meta name="viewport" content="width= device-width, initial-scale-1" />
+        <!-- viewport tag allows the website to figure out the screen size of the phone, stops the browser from lying about the screen size-->
+
+        <link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+        <!-- link allows you to link your css file to you html file. <style> tag can be used to have the css in the same file but this is not best practice-->
+
+    </head>
+
+    <body>
+
+        <header>
+            <h1> Astromony </h1>
+
+            <h2> Celestial Bodies </h2>
+            <!-- h classes go 1-6, best practice uses only 1-2/3 -->
+        </header>
+        <!-- used at the top of the page for logo, navigation and or a banner. Can also be used in divs and other sections-->
+
+
+        <p class="firstText"> The term planet is ancient, with ties to history, astrology, science, mythology, and religion. Several planets in the Solar System can be seen with the naked eye. These were regarded by many early cultures as divine, or as emissaries of deities. As scientific knowledge advanced, human perception of the planets changed, incorporating a number of disparate objects. In 2006, the International Astronomical Union (IAU) officially adopted a resolution defining planets within the Solar System. This definition is controversial because it excludes many objects of planetary mass based on where or what they orbit. Although eight of the planetary bodies discovered before 1950 remain "planets" under the modern definition, some celestial bodies, such as Ceres, Pallas, Juno and Vesta (each an object in the solar asteroid belt), and Pluto (the first trans-Neptunian object discovered), that were once considered planets by the scientific community, are no longer viewed as such.</p>
+        <!-- p tag represents a paragraph of text-->
+        <!-- class -->
+        <img id=image src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Jupiter_New_Horizons.jpg" alt="image of jupiter" />
+        <img src="resources/img/planet.jpg" alt="image of blue planet"/>
+        <!-- img also has no closing tag. Either link to online source or local source. If the picture is the wrong size we can use CSS styling to resize it, see css file. In this case we have given the web image a unique id to be able to reference it in the css file so we can resize the image to match our downloaded one-->
+        <!-- Semantic elements provide information for screen readers, eg: alt="" will provide a description of the image to someone using a screen reader. Best practice to add these to all visual media ie: images or video-->
+        <h3> Planets </h3>
+
+        <p id="cssTest">The planets were thought by Ptolemy to orbit Earth in deferent and epicycle motions. Although the idea that the planets orbited the Sun had been suggested many times, it was not until the 17th century that this view was supported by evidence from the first telescopic astronomical observations, performed by Galileo Galilei. At about the same time, by careful analysis of pre-telescopic observation data collected by Tycho Brahe, Johannes Kepler found the planets' orbits were not circular but elliptical.<br>
+            <br> As observational tools improved, astronomers saw that, like Earth, the planets rotated around tilted axes, and some shared such features as ice caps and seasons. Since the dawn of the Space Age, close observation by space probes has found that Earth and the other planets share characteristics such as volcanism, hurricanes, tectonics, and even hydrology.
+        </p>
+        <!-- browser can't read line breaks so use <br> to add lines -->
+        <hr>
+        <!-- <hr> creates a horizontal line on the page -->
+        <nav>
+            <ul>
+                <!-- <ul> is unordered list, will be bulleted-->
+                <li><a href="https://en.wikipedia.org/wiki/Pluto" target="_blank"> Pluto </a> </li>
+                <li><a href="https://en.wikipedia.org/wiki/Mars" target="_blank"> Mars </a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Jupiter" target="_blank"> Jupiter </a></li>
+                <!-- ctrl+D dupliates the current line or highlighted content-->
+                <!-- <li> creates a list-->
+                <!-- <a> allows us to create a link to our website or another webpage -->
+                <!-- target="_blank" directs the link to create a new tab when taking the user the website -->
+            </ul>
+        </nav>
+        <hr>
+        <h3> Top Planet Facts </h3>
+        <!-- different heading in same section therefore <h3> not <h4> -->
+        <ol>
+            <!-- <ol> is an ordered list, will be numbered -->
+            <li>
+                The worlds around our sun run the gamut from small and lifeless chunks of rock to gargantuan globes of gas. Our planet's siblings each have its own extreme features and crazy phenomena
+            </li>
+            <li>
+                It might seem a bit like navel-gazing to point out how special Earth is — after all, we live here. Although Earth is covered in oceans of water, Mars could have once hosted seas as well. But nowhere else in the solar system can one find atmospheres loaded with free oxygen, which ultimately proved vital to one of the other unique features of Earth — us.
+            </li>
+            <li>
+                The most extraordinary feature on Jupiter's surface is undoubtedly the Great Red Spot, a giant storm seen for more than 300 years. At its widest diameter, the Great Red Spot is roughly three times as wide as Earth. Every now and again, the spot fades entirely.
+            </li>
+        </ol>
+        <table>
+            <tr>
+                <th> Solar System</th>
+                <th> Galaxies</th>
+                <th> Stars</th>
+            </tr>
+            <tr>
+                <td> Home System</td>
+                <td> Andromeda</td>
+                <td> Rigel</td>
+            </tr>
+            <tr>
+                <td> Arcturus</td>
+                <td> Milky Way</td>
+                <td> Beetlejuice</td>
+            </tr>
+        </table>
+        <button> <a href="https://en.wikipedia.org/wiki/The_Planets" target="_blank"> Holst </a></button>
+        <!-- button makes the text a button rather. The anchor tag can be used to make the button link to something-->
+
+        <form action="https://en.wikipedia.org/wiki/Planet">
+            <!-- <form> requires user input, action tells it what to do-->
+            <input type="submit" value="enter" />
+            <!-- <input> defines what the user input will be -->
+        </form>
+        <hr>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Isic2Z2e2xs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen alt="video showing an image of a planet"></iframe>
+        <!-- Youtube link, get by clicking share then embed, deselected suggested videos option -->
+
+</body>
+</html>

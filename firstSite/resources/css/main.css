@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* the universal selector (*) can be used to reset or override the browser's default style */
+/* (/* is the comment code in css, ctrl + / can still be used ) */
+/* ; at end of line is best practice and mandatory with multiple declarations*/
+
+
+body{
+    font-size: 18px;
+    font-family: sans-serif, serif;
+    /*  , will provide an alternative font for browser if the 1st one can't be found  */
+}
+
+h1,h2{
+    color: rgb(255, 0, 0);
+    /*    ctrl + e will bring up the RGB color wheel, best practice to use this rather than stating color eg: color: red;*/
+}
+
+/*h1,h2{} will apply to both h1 & h2 but not h3 etc*/
+
+h1{
+    font-size: 40px;
+}
+
+h2{
+    color: rgb(5, 124, 5);
+    /*  css will go with the most specific selector, so here h2 is more specific than header so h2 will overide and display as green. If 2 selectors are equally specific then css will use the last one in the list  */
+    /*  create a document object model (DOM) to map out the structure of your html to work out how children/descendents and figure out how style will apply  */
+}
+
+#image {
+    width: 240px;
+    height: 240px;
+}
+
+.firstText{
+    text-align: center;
+    font-size: 20px;
+}
+
+a:link { color:rgb(19, 173, 219);}
+a:visited { color:rgb(0, 128, 25);}
+a:hover { color: rgb(0, 128, 0);}
+a:active { color: rgb(255, 0, 0);}
+
+/*this is a pseudo class*/
+/*pesudo classes are spaces sensitive, a : will not work, a: will*/
+
+#cssTest{
+/* Using an id for the specefic paragraph we want to style rather than p which would apply to every paragraph */
+    padding-top: 10px ;
+    padding-right: 14px;
+    padding-bottom: 50px;
+    padding-left: 12px;
+    padding: 10px 14px 50px 12px;
+    /*Padding can be declared on one line in a clockwise direction, ie the first 4 are equivalent to the bottom declaration.  */
+    /*  Padding is space surrounding content, used to add space between the content and the border */
+    /*  Padding can never be negative  */
+    margin: 20px 10px;
+    /* Also possible to declare top/bottom and right/left by using just 2 values, in this case- top/bottom - 20, r/l = 10 */
+    /*Margin is used to seperate content from other content*/
+    border: 10px solid red;
+    /* Border initialised as hidden, need to add a color to see */
+    /* Border seperates margin from padding*/
+}
