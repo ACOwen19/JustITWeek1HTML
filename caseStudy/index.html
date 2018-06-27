@@ -8,40 +8,67 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" type="text/css" href="resources/css/main.css"/>
+    <!-- NORMALISE.CSS RESETS ALL BROWSER VALIES -->
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css" />
+
+    <!-- FONT AWESOME Content Delivery Network (CDN), 3rd party icons -->
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- Embedded FONTS (GOOGLE)  find at fonts.google.com-->
+
+    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
+
+    <!-- MAIN.CSS comes last so it will overwrite all that comes before -->
+
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css" />
 
 </head>
 
 <body>
     <!--HOME SECTION Start-->
     <!-- Section start/end comments are good practice-->
-    <section id="homeBgImage">
+    <section id="home">
         <!-- section is a block element, can be used to create a one page site, look like they have multiple pages but have one url. Multiple page sites use multiple html files and link tags -->
         <header>
-            <div >
-                <a href="#home"><img src="resources/img/logo.png" id="logo" alt="The company's logo"/></a>
+            <div id="logo">
+                <a href="#home"><img src="resources/img/logo.png" alt="The company's logo"/></a>
             </div>
+
+            <div id="basketIcon">
+                <i class="fas fa-shopping-basket"></i>
+            </div>
+            <!-- i is an icon, this one is taken from the font awesome cdn -->
+
             <!-- NAVIGATION SECTION Start -->
-            <nav>
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#sales">Sales</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#viewCart">View Cart</a></li>
-                </ul>
-            </nav>
+
+            <div id="navC">
+                <span id="menuIcon">&#8801;</span>
+                <!-- you can also find pre programed icons on unicode and use the html code to display it -->
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#sales">Sales</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#viewCart">View Cart</a></li>
+                    </ul>
+                </nav>
+            </div>
             <!-- NAVIGATION SECTION End -->
         </header>
-        <div> Exclusive<br> Trainers </div>
-        <div> Limited Edition </div>
-        <button><a href="#"> New Arrivals </a></button>
+        <div id="exclTr"> Exclusive<br> Trainers </div>
+        <div id="ltdEd"> Limited Edition </div>
+        <div id="arrivalBC">
+            <button id="arrivalB"> <a href="#"> New Arrivals </a> </button>
+        </div>
     </section>
     <!--HOME SECTION End-->
 
     <!--PRODUCTS SECTION Start-->
-    <section>
+    <section id="products">
         <h1>Products</h1>
         <h2>All the best and unique trainers collection at exclusive PRICES!</h2>
 
@@ -49,9 +76,9 @@
             <figure>
                 <img src="resources/featuredProducts/blackpuma.jpg" alt="Puma Suede Classic Trainers In Black" />
                 <figcaption>Puma Suede Classic Trainers In Black
-                    <span>£62.00</span></figcaption>
+                    <span class="bold">£62.00</span></figcaption>
             </figure>
-            <button><a href="#"> Add To Cart </a></button>
+            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
         </article>
         <!-- article is used like div but for multiple different media, eg text, img & button -->
 
@@ -59,63 +86,63 @@
             <figure>
                 <img src="resources/featuredProducts/khakinike.jpg" alt="Nike Roshe Premium Trainers In Khaki" />
                 <figcaption>Nike Roshe Premium Trainers In Khaki
-                    <span>£70.00</span></figcaption>
+                    <span class="bold">£70.00</span></figcaption>
             </figure>
-            <button><a href="#"> Add To Cart </a></button>
+            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
         </article>
 
         <article>
             <figure>
                 <img src="resources/featuredProducts/pullandbear.jpg" alt="Pull &amp; Bear Trainers With Stripes In White" />
                 <figcaption>Pull &amp; Bear Trainers With Stripes In White
-                    <span>£27.99</span></figcaption>
+                    <span class="bold">£27.99</span></figcaption>
             </figure>
-            <button><a href="#"> Add To Cart </a></button>
+            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
         </article>
 
         <article>
             <figure>
                 <img src="resources/featuredProducts/whiteadidas.jpg" alt="Adidas Originals EQT Support Advance Trainers In White" />
                 <figcaption>Adidas Originals EQT Support Advance Trainers In White
-                    <span>£100.00</span></figcaption>
+                    <span class="bold">£100.00</span></figcaption>
             </figure>
-            <button><a href="#"> Add To Cart </a></button>
+            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
         </article>
 
         <article>
             <figure>
                 <img src="resources/featuredProducts/originaladidas.jpg" alt="Adidas Originals X_PLR Trainers In Grey" />
                 <figcaption>Adidas Originals X_PLR Trainers In Grey
-                    <span>£80.00</span></figcaption>
+                    <span class="bold">£80.00</span></figcaption>
             </figure>
-            <button><a href="#"> Add To Cart </a></button>
+            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
         </article>
 
         <article>
             <figure>
                 <img src="resources/featuredProducts/lightgreylacoste.jpg" alt="Lacoste Spirit 317 Trainers In Light Grey And Pearl Copper" />
                 <figcaption>Lacoste Spirit 317 Trainers In Light Grey And Pearl Copper
-                    <span>£77.00</span></figcaption>
+                    <span class="bold">£77.00</span></figcaption>
             </figure>
-            <button><a href="#"> Add To Cart </a></button>
+            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
         </article>
 
         <article>
             <figure>
                 <img src="resources/featuredProducts/slipdenin.jpg" alt="ASOS Slip On Plimsolls In Denim With Splatter Print" />
                 <figcaption>ASOS Slip On Plimsolls In Denim With Splatter Print
-                    <span>£20.00</span></figcaption>
+                    <span class="bold">£20.00</span></figcaption>
             </figure>
-            <button><a href="#"> Add To Cart </a></button>
+            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
         </article>
 
         <article>
             <figure>
                 <img src="resources/featuredProducts/whiteconverse.jpg" alt="Converse All Star High Top White Trainers" />
                 <figcaption>Converse All Star High Top White Trainers
-                    <span>£50.00</span></figcaption>
+                    <span class="bold">£50.00</span></figcaption>
             </figure>
-            <button><a href="#"> Add To Cart </a></button>
+            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
         </article>
 
     </section>

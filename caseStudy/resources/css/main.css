@@ -1,5 +1,5 @@
-
 /*--WEBSITE COLOUR SCHEME--*/
+
 /*
 Main Colours:
 
@@ -17,21 +17,239 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Sets defaults for body */
+
+* {
+    box-sizing: border-box;
+}
+
+/* Apply a natural box model layout to all elements */
+
+h1, h2 {
+    text-align: center;
+    font-family: sans-serif;
+}
+h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+}
+
+/*Allows us to style font*/
+
+/*MOBILE STYLES*/
+
+img,
+video {
+    width: 100%;
+    height: auto;
+}
+
+/* All images & videos will be 100% of their parent, allows them to be resized by resizing the parent */
 
 /*HOME PAGE STYLES*/
-#homeBgImage {
+
+#home {
     background-image: url(../img/trainerHomePage.jpg);
-    /* ../ lets us go up a directory when looking for a url */
+    /* ../ lets us go up a directory when looking for a url, ../../ is 2 directories etc */
+    position: relative;
     background-position: center 0;
     background-size: cover;
     background-repeat: no-repeat;
     /* Only one copy of image, no matter how large the area */
     width: 100%;
-    height: auto;
-    /* auto ensures that the height will always be set in relation to the width, image won't be stretched */
+    height: 100vh;
+    /* */
 }
 
-#logo {
-    width: 50px;
-    height: auto;
+
+    /* MAIN PAGE TEXT & BUTTON */
+
+
+
+ #exclTr {
+    position: absolute;
+    top: 23vh;
+    left: 65vw;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 1.25em;
+  }
+
+
+#ltdEd, #arrivalBC {
+    position: absolute;
+    width: 100%;
 }
+/*code repeated in multiple ids*/
+
+#ltdEd, #arrivalB {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+#ltdEd {
+    top: 82vh;
+    font-family: 'Lovers Quarrel', cursive, sans-serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+
+#arrivalBC {
+    top: 90vh;
+}
+
+#arrivalB {
+    border-radius: 5px 5px;
+    /* sets curve of button */
+    margin: 0 auto;
+    display: block;
+    padding: 10px 15px;
+    background-color: rgba(183, 154, 246, 0.2);
+    /* 4th value (A) in RGB is transparency, 0-1 range, can be set with ctrl+e like color */
+    border: 1px solid rgb(200, 177, 250);
+    cursor: pointer;
+    /* changes the cursor's image to one that indicates to the user that this is a button */
+}
+
+
+    /*NAVIGATION SECTION*/
+
+#logo {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    z-index: 101;
+    width: 45px;
+    height: auto;
+    position: fixed;
+}
+
+/*Sets position & size of the logo*/
+
+#navC {
+    background-color: rgb(53, 38, 80);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: auto;
+    /* auto ensures that the height will always be set in relation to the width, image won't be stretched */
+    position: fixed;
+    /*Will always have the same position on the screen,even while scrolling*/
+    z-index: 100;
+    /* z-index is which layer its on, eg z-index 100 will be shown on top of z-index 50 */
+    border-bottom: 2px solid rgb(183, 154, 246);
+    /* Will only display the bottom border, 2 pixels wide, solid color */
+}
+
+#basketIcon {
+    width: 100%;
+    position: absolute;
+    top: 5px;
+    text-align: center;
+    z-index: 101;
+    position: fixed;
+}
+/*sets position of basket icon*/
+
+.fa-shopping-basket {
+    font-size: 2.5em;
+    color: rgb(200, 177, 250);
+}
+
+/* Sets the size & color of the basket icon*/
+
+/*We use the more specific class*/
+
+/*Seperate the sizing and the color because icons are treated as font so we just want to use the div for positioning on the page*/
+
+#menuIcon {
+    font-size: 3em;
+    display: block; /*review in future*/
+    margin: 0 0 0 80vw;
+    /* em sizing is for accessability, 1 em is equivalent to whatever the default font size is for the page, in this case, 16px (see body) 2em is 2x that & so on */
+    /* Span is an inline element, therefore don't need to change the position, jus the margin */
+}
+
+/*This is styling for our 3 line symbol*/
+
+nav li a,
+nav li {
+    /* Why this? ---------------------------------------------*/
+    width: 100%;
+    height: auto;
+    display: block;
+    text-decoration: none;
+    outline-style: none;
+    list-style-type: none;
+}
+
+/*text-decoration, outline-style & list-style-type set to none removes the default styling for the list*/
+
+#menuItems a {
+    padding: 10px 5vw 10px 0;
+    /* need correct padding to ensure user can select one link and not accidentally another */
+    color: rgb(255, 255, 255);
+    text-align: right;
+}
+
+/*Just anchor tags within the menuItems id*/
+
+#menuItems {
+    display: none;
+}
+
+/*PRODUCTS STYLES*/
+
+figcaption {
+    text-align: center;
+}
+
+.addBC {
+
+}
+
+.addB {
+    border-radius: 5px 5px;
+    margin: 0 auto;
+    display: block;
+    padding: 10px 15px;
+    background-color: rgb(53, 38, 80);
+    border: 1px solid rgb(200, 177, 250);
+    cursor: pointer;
+}
+
+
+/*CONTACTS STYLES*/
+
+/*
+#contacts {
+    background-image: url(../img/trainerContactBackground.jpg);
+    background-position: center 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+footer {
+    background-color: rgb(17, 14, 23);
+    background-position: center 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+*/
