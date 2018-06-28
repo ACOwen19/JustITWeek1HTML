@@ -11,31 +11,37 @@ Third colour - rgb(200, 177, 250); //lighter purple
 /*--GLOBAL STYLES*/
 
 body {
-    font-family: serif, sans-serif;
+    font-family: "Mukta", sans-serif;
     font-size: 16px;
     color: rgb(30, 30, 30);
     margin: 0;
     padding: 0;
+
 }
+
 /* Sets defaults for body */
 
 * {
     box-sizing: border-box;
+
 }
 
 /* Apply a natural box model layout to all elements */
 
-h1, h2 {
+h1,
+h2 {
     text-align: center;
-    font-family: sans-serif;
+    font-weight: lighter;
 }
+
 h1 {
     font-size: 1.5em;
     text-transform: uppercase;
 }
 
 h2 {
-    font-size: 1em;
+    font-size: 1.1em;
+    margin: 0 5vw;
 }
 
 .bold {
@@ -46,7 +52,28 @@ h2 {
     font-style: italic;
 }
 
-/*Allows us to style font*/
+/*Allows us to style font using a class*/
+
+button a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+/*Sets the color of button links in different states*/
+
+/*EMBEDDED FONTS*/
+
+@font-face {
+    font-family: "28DaysLater";
+    src: url(../../vendors/fonts/28_days_later-webfont.ttf);
+    src: url(../../vendors/fonts/28_days_later-webfont.eot);
+    src: url(../../vendors/fonts/28_days_later-webfont.woff);
+    src: url(../../vendors/fonts/28_days_later-webfont.woff2);
+    font-weight: default;
+    font-style: normal;
+}
+
+/*importing a locally stored font */
 
 /*MOBILE STYLES*/
 
@@ -68,40 +95,49 @@ video {
     background-size: cover;
     background-repeat: no-repeat;
     /* Only one copy of image, no matter how large the area */
+    background-attachment: fixed;
+    /* Ensures the image stays stationary as you scroll the page */
     width: 100%;
     height: 100vh;
+    border-bottom: 1vh solid rgba(53, 38, 80, 0.6);
     /* */
 }
 
 
-    /* MAIN PAGE TEXT & BUTTON */
+/* MAIN PAGE TEXT & BUTTON */
 
-
-
- #exclTr {
+#exclTr {
+    font-family: "28DaysLater";
+    /* "" required for local fonts */
     position: absolute;
     top: 23vh;
-    left: 65vw;
+    left: 55vw;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
+    /* Enusres all text is capitalised */
     text-align: right;
-    font-size: 1.25em;
-  }
+    font-size: 1.75em;
+    letter-spacing: 3px;
+
+}
 
 
-#ltdEd, #arrivalBC {
+#ltdEd,
+#arrivalBC {
     position: absolute;
     width: 100%;
 }
+
 /*code repeated in multiple ids*/
 
-#ltdEd, #arrivalB {
+#ltdEd,
+#arrivalB {
     color: rgb(255, 255, 255);
     text-align: center;
 }
 
 #ltdEd {
-    top: 82vh;
+    top: 85vh;
     font-family: 'Lovers Quarrel', cursive, sans-serif;
     font-size: 2em;
     letter-spacing: 2px;
@@ -109,7 +145,8 @@ video {
 
 
 #arrivalBC {
-    top: 90vh;
+/*    top: 90vh;*/
+    bottom: 0;
 }
 
 #arrivalB {
@@ -117,23 +154,28 @@ video {
     /* sets curve of button */
     margin: 0 auto;
     display: block;
-    padding: 10px 15px;
+    /* sets the position of the button within the div */
+    padding: 12px 15px;
     background-color: rgba(183, 154, 246, 0.2);
     /* 4th value (A) in RGB is transparency, 0-1 range, can be set with ctrl+e like color */
     border: 1px solid rgb(200, 177, 250);
     cursor: pointer;
+    font-size: 1.1em;
     /* changes the cursor's image to one that indicates to the user that this is a button */
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 0, 128), 0 0 30px rgb(255, 0, 128), 0 0 40px rgb(255, 0, 128), 0 0 55px rgb(255, 0, 128), 0 0 75px rgb(255, 0, 128);
 }
 
 
-    /*NAVIGATION SECTION*/
+/*NAVIGATION SECTION*/
 
 #logo {
     position: absolute;
-    top: 3px;
+    top: 5px;
     left: 10px;
-    z-index: 101;
-    width: 45px;
+    z-index: 105;
+    width: 40px;
     height: auto;
     position: fixed;
 }
@@ -155,13 +197,16 @@ video {
 }
 
 #basketIcon {
-    width: 100%;
+    width: 50%;
+    margin: 0 25%;
+    /* Setting width to 60% and margin to 0 20% allows us to maintain the effct of width 100% to places the basket in the middle while also leaving space on either side to allow the logo and menu to be clicked. this is required becayse menu is contained in nav which has a lower z-index than basket by necessity*/
     position: absolute;
     top: 5px;
     text-align: center;
     z-index: 101;
     position: fixed;
 }
+
 /*sets position of basket icon*/
 
 .fa-shopping-basket {
@@ -177,10 +222,19 @@ video {
 
 #menuIcon {
     font-size: 3em;
-    display: block; /*review in future*/
+    display: block;
+    /*review in future*/
     margin: 0 0 0 80vw;
+    z-index: 105;
+/*    background-color: rgb(28, 8, 28);*/
     /* em sizing is for accessability, 1 em is equivalent to whatever the default font size is for the page, in this case, 16px (see body) 2em is 2x that & so on */
     /* Span is an inline element, therefore don't need to change the position, jus the margin */
+}
+
+#menuIcon a {
+    color: rgb(255, 255, 255);
+
+    text-decoration: none;
 }
 
 /*This is styling for our 3 line symbol*/
@@ -213,43 +267,269 @@ nav li {
 
 /*PRODUCTS STYLES*/
 
-figcaption {
+figure img {
+    margin: 0 auto;
+    display: block;
+}
+
+
+.productC {
     text-align: center;
 }
 
-.addBC {
-
+figcaption span {
+    display: block;
+    font-weight: bold;
 }
 
+/*ensuring that
+
+/*PRODUCTS/SALES Button Element Styling*/
+
 .addB {
-    border-radius: 5px 5px;
+    color: rgb(255, 255, 255);
     margin: 0 auto;
     display: block;
     padding: 10px 15px;
     background-color: rgb(53, 38, 80);
     border: 1px solid rgb(200, 177, 250);
     cursor: pointer;
+    border-radius: 5px 5px;
 }
 
+/*after is a Pseudo selector that inserts content after the html*/
 
-/*CONTACTS STYLES*/
+.addB a:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\  \f07a";
+    /* entering unicode characters to our site using the font awesome CDN.
+    To use unicode characters/icons from the FA CDN you must set font-family to "Font Awesome 5 Free" & the font-weight to 900. Content will define the character you want to use, find the unicode on the font awesome website */
+}
 
-/*
-#contacts {
+/* For unicode don't use the U+ if there is one and wrap it in "\"*/
+
+/*SALES STYLES*/
+
+
+#cartDrop {
+    border: 1px solid rgb(216, 205, 242);
+    width: 70%;
+    margin: 0 15%;
+    text-align: left;
+    font-weight: bold;
+    display: none;
+}
+
+#userLogin {
+    border: 1px solid rgb(216, 205, 242);
+    width: 70%;
+    margin: 0 15%;
+    text-align: center;
+}
+
+#userLogin span {
+    font-weight: bold;
+}
+
+#userLogin form {
+    margin: 10px;
+}
+
+#accountBC {
+    margin: 2vh 0;
+}
+
+.accountB {
+    color: rgb(255, 255, 255);
+    margin: 0 auto;
+    display: inline;
+    padding: 10px 15px;
+    background-color: rgb(53, 38, 80);
+    border: 1px solid rgb(200, 177, 250);
+    cursor: pointer;
+    border-radius: 5px 5px
+}
+
+/*ABOUT STYLES*/
+
+#about {
+    text-align: center;
+}
+
+#vidText {
+    margin: 0 10vw;
+}
+
+.extraAbout {
+    display: none;
+}
+
+/*CONTACT STYLES*/
+
+
+#contact {
     background-image: url(../img/trainerContactBackground.jpg);
     background-position: center 0;
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
+    height: auto;
+    text-align: center;
+    color: rgb(255, 255, 255);
 }
 
-footer {
-    background-color: rgb(17, 14, 23);
-    background-position: center 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
+#contactBack {
+    background-color: rgba(25, 25, 25, 0.6);
 }
+
+
+
+#phoneB {
+    color: rgb(255, 255, 255);
+    margin: 1vh auto;
+    display: block;
+    padding: 10px 15px;
+    background-color: rgb(53, 38, 80);
+    border: 1px solid rgb(200, 177, 250);
+    cursor: pointer;
+    border-radius: 5px 5px
+}
+
+#phoneB a:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f095\  ";
+    color: rgb(183, 154, 246);
+}
+
+#emailB {
+    color: rgb(255, 255, 255);
+    margin: 1vh auto;
+    display: block;
+    padding: 10px 15px;
+    background-color: rgb(53, 38, 80);
+    border: 1px solid rgb(200, 177, 250);
+    cursor: pointer;
+    border-radius: 5px 5px
+}
+
+#emailB a:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0e0\  ";
+    color: rgb(183, 154, 246);
+}
+
+
+#messageForm {
+    text-align: left;
+    padding: 0 15%;
+    /*    width: 70%;*/
+}
+
+#messageForm input {
+    background-color: rgba(25, 25, 25, 0.8);
+    border: 1px solid rgb(69, 67, 72);
+    box-shadow: none;
+    width: 100%;
+}
+
+#message input {
+    height: 15vh;
+}
+
+#sendM {
+    color: rgb(255, 255, 255);
+    margin: 2vh auto;
+    display: block;
+    padding: 10px 15px;
+    background-color: rgb(53, 38, 80);
+    border: 1px solid rgb(200, 177, 250);
+    cursor: pointer;
+    border-radius: 5px 5px
+}
+
+#botLinks {
+    background-color: rgb(17, 14, 23) !important;
+    width: 100%;
+    padding: 3vh 0;
+}
+
+#linkCol {
+    color: rgb(183, 154, 246);
+}
+
+#copyright {
+    display: none;
+}
+
+/* -------------*********------------*/
+
+/* MEDIA QUERY */
+
+/*MOBILE 568px & ABOVE*/
+
+@media screen and (min-width: 568px) {
+    /*This media query will make changes to our code if the minimum width of the screen displaying the website is 568px*/
+    /*Only include what you are changing*/
+    #exclTr {
+        left: 70vw;
+    }
+}
+
+/*TABLET 768px & ABOVE*/
+
+@media screen and (min-width: 768px) {
+
+
+    #exclTr {
+        top: 80vh;
+        left: 75vw;
+    }
+
+    #ltdEd,
+    #arrivalBC {
+        width: auto;
+    }
+
+    #ltdEd {
+        top: 90vh;
+        left: 75vw;
+        text-align: right;
+
+    }
+
+
+    #arrivalBC {
+        left: 77vw;
+        margin: auto;
+    }
+
+
+    .productC {
+        float: left;
+        width: 33%
+    }
+    .clearer {
+        clear:both;
+    }
+
+    .extraAbout {
+        display:inherit;
+    }
+
+/*
+    #arrivalB {
+        border-radius: 5px 5px;
+        margin: 0 auto;
+        display: block;
+        padding: 10px 15px;
+        background-color: rgba(183, 154, 246, 0.2);
+        border: 1px solid rgb(200, 177, 250);
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
 */
+    }
+}
