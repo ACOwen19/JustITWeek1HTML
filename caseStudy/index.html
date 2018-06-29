@@ -36,181 +36,190 @@
     <!-- Section start/end comments are good practice-->
     <section id="home">
         <!-- section is a block element, can be used to create a one page site, look like they have multiple pages but have one url. Multiple page sites use multiple html files and link tags -->
-        <header>
-            <div id="logo">
-                <a href="#home"><img src="resources/img/logo.png" alt="The company's logo"/></a>
+        <div id="homeBack">
+            <header>
+                <div id="logo">
+                    <a href="#home"><img src="resources/img/logo.png" alt="The company's logo"/></a>
+                </div>
+
+                <div id="basketIcon">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <!-- i is an icon, this one is taken from the font awesome cdn -->
+
+                <!-- NAVIGATION SECTION Start -->
+
+                <div id="navC">
+                    <span id="menuIcon"><a href="#">&#8801;</a></span>
+                    <!-- you can also find pre programed icons on unicode and use the html code to display it -->
+                    <nav>
+                        <ul id="menuItems">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#sales">Sales</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li id="navCart"><a href="#viewCart">View Cart</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- NAVIGATION SECTION End -->
+            </header>
+
+            <div id="exclTr"> Exclusive<br> Trainers </div>
+            <div id="ltdEd"> Limited Edition </div>
+            <div id="arrivalBC">
+                <button id="arrivalB"> <a href="#"> New Arrivals </a> </button>
             </div>
 
-            <div id="basketIcon">
-                <i class="fas fa-shopping-basket"></i>
-            </div>
-            <!-- i is an icon, this one is taken from the font awesome cdn -->
-
-            <!-- NAVIGATION SECTION Start -->
-
-            <div id="navC">
-                <span id="menuIcon"><a href="#">&#8801;</a></span>
-                <!-- you can also find pre programed icons on unicode and use the html code to display it -->
-                <nav>
-                    <ul id="menuItems">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#sales">Sales</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#viewCart">View Cart</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <!-- NAVIGATION SECTION End -->
-        </header>
-        <div id="exclTr"> Exclusive<br> Trainers </div>
-        <div id="ltdEd"> Limited Edition </div>
-        <div id="arrivalBC">
-            <button id="arrivalB"> <a href="#"> New Arrivals </a> </button>
+            <video class="homeVideo" autoplay loop>
+                <source src="resources/video/homeVideo.mp4" type="video/mp4"/>
+                </video>
         </div>
     </section>
     <!--HOME SECTION End-->
-
+    <hr>
     <!--PRODUCTS SECTION Start-->
     <section id="products">
         <h1>Products</h1>
         <h2>All the best and unique trainers collection at exclusive PRICES!</h2>
+        <div class="trainers">
+            <article class="productC">
+                <figure>
+                    <img src="resources/featuredProducts/blackpuma.jpg" alt="Puma Suede Classic Trainers In Black" />
+                    <figcaption>Puma Suede Classic Trainers In Black
+                        <span>£62.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
+            <!-- article is used like div but for multiple different media, eg text, img & button -->
 
-        <article class="productC">
-            <figure>
-                <img src="resources/featuredProducts/blackpuma.jpg" alt="Puma Suede Classic Trainers In Black" />
-                <figcaption>Puma Suede Classic Trainers In Black
-                    <span>£62.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
-        <!-- article is used like div but for multiple different media, eg text, img & button -->
+            <article class="productC">
+                <figure>
+                    <img src="resources/featuredProducts/khakinike.jpg" alt="Nike Roshe Premium Trainers In Khaki" />
+                    <figcaption>Nike Roshe Premium Trainers In Khaki
+                        <span>£70.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
 
-        <article class="productC">
-            <figure>
-                <img src="resources/featuredProducts/khakinike.jpg" alt="Nike Roshe Premium Trainers In Khaki" />
-                <figcaption>Nike Roshe Premium Trainers In Khaki
-                    <span>£70.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
+            <article class="productC">
+                <figure>
+                    <img src="resources/featuredProducts/pullandbear.jpg" alt="Pull &amp; Bear Trainers With Stripes In White" />
+                    <figcaption>Pull &amp; Bear Trainers With Stripes In White
+                        <span>£27.99</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
 
-        <article class="productC">
-            <figure>
-                <img src="resources/featuredProducts/pullandbear.jpg" alt="Pull &amp; Bear Trainers With Stripes In White" />
-                <figcaption>Pull &amp; Bear Trainers With Stripes In White
-                    <span>£27.99</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
+            <article class="productC">
+                <figure>
+                    <img src="resources/featuredProducts/whiteadidas.jpg" alt="Adidas Originals EQT Support Advance Trainers In White" />
+                    <figcaption>Adidas Originals EQT Support Advance Trainers In White
+                        <span>£100.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
 
-        <article class="productC">
-            <figure>
-                <img src="resources/featuredProducts/whiteadidas.jpg" alt="Adidas Originals EQT Support Advance Trainers In White" />
-                <figcaption>Adidas Originals EQT Support Advance Trainers In White
-                    <span>£100.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
+            <article class="productC">
+                <figure>
+                    <img src="resources/featuredProducts/originaladidas.jpg" alt="Adidas Originals X_PLR Trainers In Grey" />
+                    <figcaption>Adidas Originals X_PLR Trainers In Grey
+                        <span>£80.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
 
-        <article class="productC">
-            <figure>
-                <img src="resources/featuredProducts/originaladidas.jpg" alt="Adidas Originals X_PLR Trainers In Grey" />
-                <figcaption>Adidas Originals X_PLR Trainers In Grey
-                    <span>£80.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
+            <article class="productC">
+                <figure>
+                    <img src="resources/featuredProducts/lightgreylacoste.jpg" alt="Lacoste Spirit 317 Trainers In Light Grey And Pearl Copper" />
+                    <figcaption>Lacoste Spirit 317 Trainers In Light Grey And Pearl Copper
+                        <span>£77.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
 
-        <article class="productC">
-            <figure>
-                <img src="resources/featuredProducts/lightgreylacoste.jpg" alt="Lacoste Spirit 317 Trainers In Light Grey And Pearl Copper" />
-                <figcaption>Lacoste Spirit 317 Trainers In Light Grey And Pearl Copper
-                    <span>£77.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
+            <article class="productC">
+                <figure>
+                    <img src="resources/featuredProducts/slipdenin.jpg" alt="ASOS Slip On Plimsolls In Denim With Splatter Print" />
+                    <figcaption>ASOS Slip On Plimsolls In Denim With Splatter Print
+                        <span>£20.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
 
-        <article class="productC">
-            <figure>
-                <img src="resources/featuredProducts/slipdenin.jpg" alt="ASOS Slip On Plimsolls In Denim With Splatter Print" />
-                <figcaption>ASOS Slip On Plimsolls In Denim With Splatter Print
-                    <span>£20.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
-
-        <article class="productC">
-            <figure>
-                <img src="resources/featuredProducts/whiteconverse.jpg" alt="Converse All Star High Top White Trainers" />
-                <figcaption>Converse All Star High Top White Trainers
-                    <span>£50.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
-        <div class="clearer">  </div>
+            <article class="productC">
+                <figure>
+                    <img src="resources/featuredProducts/whiteconverse.jpg" alt="Converse All Star High Top White Trainers" />
+                    <figcaption>Converse All Star High Top White Trainers
+                        <span>£50.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
+        </div>
     </section>
     <!--PRODUCTS SECTION End-->
+    <hr>
     <!--SALES SECTION Start-->
-    <section>
+    <section id="sales">
         <h1>Sales</h1>
         <h2>Take advantage of our sales and get up to a 50% DISCOUNT!</h2>
+        <div class="trainers">
+            <article class="productC">
+                <figure>
+                    <img src="resources/salesProducts/blacktopplimsolls.jpg" alt="Lyle &amp; Scott Lunan Hi Top Plimsolls In Twill Black" />
+                    <figcaption>Lyle &amp; Scott Lunan Hi Top Plimsolls In Twill Black
+                        <span>NOW £35.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
 
-        <article class="productC">
-            <figure>
-                <img src="resources/salesProducts/blacktopplimsolls.jpg" alt="Lyle &amp; Scott Lunan Hi Top Plimsolls In Twill Black" />
-                <figcaption>Lyle &amp; Scott Lunan Hi Top Plimsolls In Twill Black
-                    <span>NOW £35.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
+            <article class="productC">
+                <figure>
+                    <img src="resources/salesProducts/camoconverse.jpg" alt="Converse Chuck Taylor All Star II Plimsoll In Camo" />
+                    <figcaption>Converse Chuck Taylor All Star II Plimsoll In Camo
+                        <span>NOW £41.50</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
 
-        <article class="productC">
-            <figure>
-                <img src="resources/salesProducts/camoconverse.jpg" alt="Converse Chuck Taylor All Star II Plimsoll In Camo" />
-                <figcaption>Converse Chuck Taylor All Star II Plimsoll In Camo
-                    <span>NOW £41.50</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
+            <article class="productC">
+                <figure>
+                    <img src="resources/salesProducts/greyplimsolls.jpg" alt="Aldo Greeney Plimsolls" />
+                    <figcaption>Aldo Greeney Plimsolls
+                        <span>NOW £35.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
 
-        <article class="productC">
-            <figure>
-                <img src="resources/salesProducts/greyplimsolls.jpg" alt="Aldo Greeney Plimsolls" />
-                <figcaption>Aldo Greeney Plimsolls
-                    <span>NOW £35.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
-
-        <article class="productC">
-            <figure>
-                <img src="resources/salesProducts/redconverse.jpg" alt="Converse Chuck Taylor All Star II Plimsoll In Red" />
-                <figcaption>Converse Chuck Taylor All Star II Plimsoll In Red
-                    <span>NOW £35.00</span></figcaption>
-            </figure>
-            <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
-        </article>
-        <div class="clearer">  </div>
+            <article class="productC">
+                <figure>
+                    <img src="resources/salesProducts/redconverse.jpg" alt="Converse Chuck Taylor All Star II Plimsoll In Red" />
+                    <figcaption>Converse Chuck Taylor All Star II Plimsoll In Red
+                        <span>NOW £35.00</span></figcaption>
+                </figure>
+                <div class="addBC"><button class="addB"><a href="#"> Add To Cart </a></button></div>
+            </article>
+        </div>
 
         <div id="cartDrop">
-            <p>SHOPING CART - Drag and Drop the trainers image here...</p>
+            <p>SHOPPING CART - Drag and Drop the trainers image here...</p>
         </div>
 
         <br>
         <div id="userLogin">
             <p><span>PREMIER DELIVERY</span> - UNLIMITED NEXT-DAY DELIVERY AND CLICK AND COLLECT FOR £9.95 A YEAR.</p>
-
-            <form>
-                Username:<br>
+            <ul class="loginForm">
+            <form class="loginEnt">
+                Username:<br class="formStack">
                 <input type="text" />
             </form>
 
-            <form>
-                Password:<br>
+            <form class="loginEnt">
+                Password:<br class="formStack">
                 <input type="text" />
             </form>
+                </ul>
             <!-- Should both buttons and forms be in an unordered list???? -->
             <div id="accountBC">
                 <button class="accountB"><a href="#"> Login </a></button>
@@ -218,50 +227,56 @@
             </div>
         </div>
     </section>
-
+    <!--SALES SECTION End-->
+    <hr>
     <!--ABOUT SECTION Start-->
     <section id="about">
         <h1>About</h1>
         <h2>A brief description of our company and all the services we offer.</h2>
 
         <div id="vidText">
-            <!-- ADD VIDEO HERE -->
-            <img src="resources/img/videoPlaceholder.JPG" />
-            <p>At lumière we provide superior customer service, with a commitment to deliver distinctive products of the highest quality. Our trainers and promotional items communicate a classic, retro influence. Keeping a watchful eye on trends and styles, our in-house graphic designers work to create a unique company, group or team identity – one that sets you apart from the rest.</p>
-            <p class="extraAbout">We are proud of our exlusive range of trainers with limited edition lines to compete with all the top brands in the world.</p>
-            <p class="extraAbout">Our Premier Delivery service is one of the best delivery services available online and the most affordable.</p>
+            <div id="vidLeft"><video poster="resources/img/videoPlaceholder.JPG" preload="auto" controls>
+                <source src="resources/video/trainers.mp4" type="video/mp4"/>
+                </video></div>
+            <div id="textRight">
+            <p class="deskAside">At lumière we provide superior customer service, with a commitment to deliver distinctive products of the highest quality. Our trainers and promotional items communicate a classic, retro influence. Keeping a watchful eye on trends and styles, our in-house graphic designers work to create a unique company, group or team identity – one that sets you apart from the rest.</p>
+            <p class="extraAbout" class="deskAside">We are proud of our exlusive range of trainers with limited edition lines to compete with all the top brands in the world.</p>
+            <p class="extraAbout" class="deskAside">Our Premier Delivery service is one of the best delivery services available online and the most affordable.</p></div>
+            <div class="floatEn"></div>
+            <!-- DOESNT WORK -->
+
         </div>
     </section>
     <!--ABOUT SECTION End-->
-
+    <hr>
     <!--CONTACT SECTION Start-->
+    <div id="contactShoe">
     <section id="contact">
         <div id="contactBack">
 
             <h1>CONTACT</h1>
             <h2>Get in touch with us via our contact form, email or phone number.</h2>
+                <button id="phoneB"><a href="#">0208 488 3444</a> </button>
+                <button id="emailB"><a href="#">Email Us</a> </button>
 
-            <button id="phoneB"><a href="#">0208 488 3444</a> </button>
-            <button id="emailB"><a href="#">Email Us</a> </button>
-
-            <div>
-                <p>Main Office<br><br><span class="italics">Lumière<br>2nd Floor<br>St. Clare House<br>30-33 Minories<br>London EC3N 1DD</span></p>
-            </div>
-            <div id="messageForm">
-                <form>
-                    Name<br>
-                    <input type="text" />
-                </form>
-                <form>
-                    Email<br>
-                    <input type="text" />
-                </form>
-                <form id="message">
-                    Message<br>
-                    <input type="text" />
-                </form>
-                <button id="sendM"><a href="#">SEND MESSAGE</a> </button>
-            </div>
+                <div id="address">
+                    <span id="mainAd">Main Office</span><br><span id="italicsAd">Lumière<br>2nd Floor<br>St. Clare House<br>30-33 Minories<br>London EC3N 1DD</span>
+                </div>
+                <div id="messageForm">
+                    <form>
+                        Name<br>
+                        <input type="text" />
+                    </form>
+                    <form>
+                        Email<br>
+                        <input type="text" />
+                    </form>
+                    <form id="message">
+                        Message<br>
+                        <input type="text" />
+                    </form>
+                    <button id="sendM"><a href="#">SEND MESSAGE</a> </button>
+                </div>
             <footer id="botLinks">
                 <div id="linkCol">
                     <i class="fab fa-linkedin-in"><a href="#"> </a> </i>
@@ -272,8 +287,9 @@
             </footer>
 
             <p id="copyright"> &copy; 2017 lumière</p>
-            </div>
+        </div>
     </section>
+    </div>
     <!--CONTACT SECTION End-->
 
 

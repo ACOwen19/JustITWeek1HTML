@@ -37,6 +37,7 @@ h2 {
 h1 {
     font-size: 1.5em;
     text-transform: uppercase;
+    padding-top: 1vh;
 }
 
 h2 {
@@ -44,15 +45,7 @@ h2 {
     margin: 0 5vw;
 }
 
-.bold {
-    font-weight: bold;
-}
 
-.italics {
-    font-style: italic;
-}
-
-/*Allows us to style font using a class*/
 
 button a {
     color: rgb(255, 255, 255);
@@ -100,8 +93,10 @@ video {
     width: 100%;
     height: 100vh;
     border-bottom: 1vh solid rgba(53, 38, 80, 0.6);
+    z-index: 1;
     /* */
 }
+
 
 
 /* MAIN PAGE TEXT & BUTTON */
@@ -118,6 +113,7 @@ video {
     text-align: right;
     font-size: 1.75em;
     letter-spacing: 3px;
+    z-index: 5;
 
 }
 
@@ -126,6 +122,7 @@ video {
 #arrivalBC {
     position: absolute;
     width: 100%;
+    z-index: 5
 }
 
 /*code repeated in multiple ids*/
@@ -145,7 +142,7 @@ video {
 
 
 #arrivalBC {
-/*    top: 90vh;*/
+    /*    top: 90vh;*/
     bottom: 0;
 }
 
@@ -159,8 +156,8 @@ video {
     background-color: rgba(183, 154, 246, 0.2);
     /* 4th value (A) in RGB is transparency, 0-1 range, can be set with ctrl+e like color */
     border: 1px solid rgb(200, 177, 250);
-    cursor: pointer;
     font-size: 1.1em;
+    cursor: pointer;
     /* changes the cursor's image to one that indicates to the user that this is a button */
     text-transform: uppercase;
     text-align: center;
@@ -226,7 +223,7 @@ video {
     /*review in future*/
     margin: 0 0 0 80vw;
     z-index: 105;
-/*    background-color: rgb(28, 8, 28);*/
+    /*    background-color: rgb(28, 8, 28);*/
     /* em sizing is for accessability, 1 em is equivalent to whatever the default font size is for the page, in this case, 16px (see body) 2em is 2x that & so on */
     /* Span is an inline element, therefore don't need to change the position, jus the margin */
 }
@@ -265,17 +262,45 @@ nav li {
     display: none;
 }
 
+.homeVideo {
+    display: none;
+}
+
 /*PRODUCTS STYLES*/
 
+.trainers {
+    display: flex;
+    /* display:flex unlocks flext declarations */
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+/*
 figure img {
     margin: 0 auto;
     display: block;
 }
-
+*/
 
 .productC {
+    /*    flex-grow: 1;*/
+    /*    margin: 1%;*/
     text-align: center;
+    width: 100%;
+    /*    width: 220px;*/
 }
+
+
+/*
+.productC figcaption{
+    min-height: 75px
+}
+*/
+
+/*setting min height of fig caption so that the button will always align*/
 
 figcaption span {
     display: block;
@@ -309,16 +334,24 @@ figcaption span {
 
 /* For unicode don't use the U+ if there is one and wrap it in "\"*/
 
-/*SALES STYLES*/
+.floatEn {
+    display: none;
+}
 
+/*SALES STYLES*/
 
 #cartDrop {
     border: 1px solid rgb(216, 205, 242);
     width: 70%;
-    margin: 0 15%;
+    height: 12vh;
+    margin: 2vh 15%;
     text-align: left;
     font-weight: bold;
     display: none;
+}
+
+#cartDrop p {
+    margin-left: 1vw;
 }
 
 #userLogin {
@@ -367,31 +400,46 @@ figcaption span {
 
 /*CONTACT STYLES*/
 
+#contactShoe {
+   background-image: url(../img/trainerContactBackground.jpg);
+    background-position: center 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    width: 100%;
+    height: auto;
+}
 
 #contact {
+/*
     background-image: url(../img/trainerContactBackground.jpg);
     background-position: center 0;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100%;
-    height: auto;
+    overflow-y: hidden;
+*/
+
     text-align: center;
     color: rgb(255, 255, 255);
+
 }
 
 #contactBack {
-    background-color: rgba(25, 25, 25, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-y: hidden;
 }
 
-
+#contact h1 {
+    padding-top: 10vh;
+}
 
 #phoneB {
     color: rgb(255, 255, 255);
-    margin: 1vh auto;
+    margin: 2vh auto;
     display: block;
     padding: 10px 15px;
     background-color: rgb(53, 38, 80);
-    border: 1px solid rgb(200, 177, 250);
+    border: none;
     cursor: pointer;
     border-radius: 5px 5px
 }
@@ -405,11 +453,11 @@ figcaption span {
 
 #emailB {
     color: rgb(255, 255, 255);
-    margin: 1vh auto;
+    margin: 2vh auto;
     display: block;
     padding: 10px 15px;
     background-color: rgb(53, 38, 80);
-    border: 1px solid rgb(200, 177, 250);
+    border: none;
     cursor: pointer;
     border-radius: 5px 5px
 }
@@ -421,6 +469,14 @@ figcaption span {
     color: rgb(183, 154, 246);
 }
 
+#mainAd {
+    line-height: 3;
+}
+
+#italicsAd {
+    font-style: italic;
+    line-height: 2;
+}
 
 #messageForm {
     text-align: left;
@@ -450,6 +506,7 @@ figcaption span {
     border-radius: 5px 5px
 }
 
+
 #botLinks {
     background-color: rgb(17, 14, 23) !important;
     width: 100%;
@@ -476,16 +533,83 @@ figcaption span {
     #exclTr {
         left: 70vw;
     }
+
 }
 
-/*TABLET 768px & ABOVE*/
+    /*TABLET 768px & ABOVE*/
+    @media screen and (min-width: 768px) {
 
-@media screen and (min-width: 768px) {
 
+        #exclTr {
+            top: 80vh;
+            left: 75vw;
+        }
+
+        #ltdEd,
+        #arrivalBC {
+            width: auto;
+        }
+
+        #ltdEd {
+            top: 90vh;
+            left: 75vw;
+            text-align: right;
+        }
+
+
+        #arrivalBC {
+            left: 77vw;
+            margin: auto;
+        }
+
+
+        .productC {
+            width: 33%;
+        }
+
+        .extraAbout {
+            display: inherit;
+        }
+
+        #messageForm {
+            padding: 0 3% 0 1%;
+        }
+        .productC figcaption {
+            min-height: 75px
+        }
+
+        .productC figure {
+            margin-bottom: 0;
+        }
+
+        .formStack {
+            display: none;
+        }
+    }
+
+
+/* DESKTOP 1024px & ABOVE*/
+
+@media screen and (min-width: 1024px) {
+
+    #home {}
+
+    #menuItems {
+        display: inline;
+    }
+
+    #logo {
+        position: absolute;
+        top: 10vh;
+        left: 6vw;
+        width: 10%;
+        z-index: 90;
+    }
 
     #exclTr {
-        top: 80vh;
-        left: 75vw;
+        top: 65vh;
+        left: 70vw;
+        font-size: 3.5em;
     }
 
     #ltdEd,
@@ -494,42 +618,219 @@ figcaption span {
     }
 
     #ltdEd {
-        top: 90vh;
-        left: 75vw;
-        text-align: right;
-
+        top: 82vh;
+        left: 5vw;
+        font-size: 3em;
+        text-align: center;
+        font-weight: lighter;
     }
-
 
     #arrivalBC {
-        left: 77vw;
-        margin: auto;
+        left: 5vw;
+        bottom: auto;
+        top: 88vh;
+        font-size: 1.4em;
+        font-weight: lighter;
     }
 
+    #arrivalB {
+        padding: 15px 26px;
+    }
+
+    #menuIcon,
+    #basketIcon {
+        display: none;
+    }
+
+
+    #navC {
+        border-bottom: none;
+        text-align: right;
+        padding: 1% 0;
+    }
+
+    nav a {
+        font-size: .8em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+
+    #menuItems a {
+        padding: 0px 20px;
+        /* need correct padding to ensure user can select one link and not accidentally another */
+        color: rgb(255, 255, 255);
+        text-align: center;
+        display: inline;
+    }
+
+    #menuItems li {
+        display: inline;
+        border: none;
+    }
+
+    nav li a,
+    nav li {
+
+        width: 100%;
+        height: auto;
+        display: block;
+        text-decoration: none;
+        outline-style: none;
+        list-style-type: none;
+    }
+
+    #navCart a {
+        padding: 0 20px 0 4px;
+    }
+
+    #navCart:before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        text-align: right;
+        padding: 0 0 0 0;
+        color: rgb(200, 177, 250);
+        content: "\f291";
+    }
 
     .productC {
-        float: left;
-        width: 33%
-    }
-    .clearer {
-        clear:both;
+        width: 25%
     }
 
-    .extraAbout {
-        display:inherit;
+    #cartDrop {
+        display: inherit;
     }
+
+
+    .deskAside {
+
+    }
+
+    #vidLeft{
+        float: left;
+        width: 50%;
+        height: auto;
+    }
+
+    #textRight{
+        float: right;
+        width: 50%;
+        height: auto;
+    }
+
+    .floatEn {
+        clear: both;
+    }
+
 
 /*
-    #arrivalB {
-        border-radius: 5px 5px;
-        margin: 0 auto;
-        display: block;
-        padding: 10px 15px;
-        background-color: rgba(183, 154, 246, 0.2);
-        border: 1px solid rgb(200, 177, 250);
-        cursor: pointer;
-        text-transform: uppercase;
-        text-align: center;
-*/
+
+    #contactShoe {
+        position: relative;
+        height: 100vh;
     }
+*/
+/*
+
+    #contactBack {
+        position: relative;
+        height: 100vh;
+    }
+*/
+
+
+    #messageForm {
+        position: absolute;
+        top: 20vh;
+        left: 40vw;
+        width: 50vw;
+    }
+
+    #messageForm input {
+        margin: 1vh 0 3vh 0
+    }
+
+    #sendM {
+        margin: 0 auto;
+    }
+*/
+
+    /*
+    #sendM {
+        position: absolute;
+        top: 60vh;
+    }
+*/
+/*
+    #address {
+        position: absolute;
+        top: 20vh;
+        left: 20vw;
+        text-align: left;
+    }
+
+    #address p {
+        margin: 0;
+    }
+
+    #emailB {
+        position: absolute;
+        top: 57vh;
+        left: 20vw
+    }
+
+    #phoneB {
+        position: absolute;
+        top: 50vh;
+        left: 20vw
+    }
+*/
+
+    #botLinks {
+        position: absolute;
+        bottom: 0;
+
+    }
+}
+
+/* DESKTOP 1280px & ABOVE*/
+
+@media screen and (min-width: 1280px) {
+    #home {
+        background-image: none;
+        overflow-y: hidden;
+    }
+
+    .homeVideo {
+        display: inline-block;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        z-index: -1000;
+    }
+
+    #homeBack {
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+    }
+
+
+    /*
+    #logo{
+        display: none;
+    }
+
+    #exclTr{
+        display: none;
+    }
+
+    #arrivalB{
+        display: none;
+    }
+*/
 }
