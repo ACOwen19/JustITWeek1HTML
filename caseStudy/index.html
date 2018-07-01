@@ -50,7 +50,7 @@
                 <!-- NAVIGATION SECTION Start -->
 
                 <div id="navC">
-                    <span id="menuIcon"><a href="#">&#8801;</a></span>
+                    <span id="menuIcon">&#8801;</span>
                     <!-- you can also find pre programed icons on unicode and use the html code to display it -->
                     <nav>
                         <ul id="menuItems">
@@ -210,17 +210,16 @@
         <div id="userLogin">
             <p><span>PREMIER DELIVERY</span> - UNLIMITED NEXT-DAY DELIVERY AND CLICK AND COLLECT FOR £9.95 A YEAR.</p>
             <ul class="loginForm">
-            <form class="loginEnt">
-                Username:<br class="formStack">
-                <input type="text" />
-            </form>
+                <form class="loginEnt">
+                    <p class="formTitle">Username:</p>   
+                    <input type="text" />
+                </form>
 
-            <form class="loginEnt">
-                Password:<br class="formStack">
-                <input type="text" />
-            </form>
-                </ul>
-            <!-- Should both buttons and forms be in an unordered list???? -->
+                <form class="loginEnt">
+                    <p class="formTitle">Password:</p> 
+                    <input type="text" />
+                </form>
+            </ul>
             <div id="accountBC">
                 <button class="accountB"><a href="#"> Login </a></button>
                 <button class="accountB"><a href="#"> Register </a></button>
@@ -235,61 +234,80 @@
         <h2>A brief description of our company and all the services we offer.</h2>
 
         <div id="vidText">
-            <div id="vidLeft"><video poster="resources/img/videoPlaceholder.JPG" preload="auto" controls>
+            <ul id="deskShift">
+                <li id="vidLeft">
+                    <video poster="resources/img/videoPlaceholder.JPG" preload="auto" controls>
                 <source src="resources/video/trainers.mp4" type="video/mp4"/>
-                </video></div>
-            <div id="textRight">
-            <p class="deskAside">At lumière we provide superior customer service, with a commitment to deliver distinctive products of the highest quality. Our trainers and promotional items communicate a classic, retro influence. Keeping a watchful eye on trends and styles, our in-house graphic designers work to create a unique company, group or team identity – one that sets you apart from the rest.</p>
-            <p class="extraAbout" class="deskAside">We are proud of our exlusive range of trainers with limited edition lines to compete with all the top brands in the world.</p>
-            <p class="extraAbout" class="deskAside">Our Premier Delivery service is one of the best delivery services available online and the most affordable.</p></div>
-            <div class="floatEn"></div>
-            <!-- DOESNT WORK -->
-
+                </video>
+                </li>
+                <li id="textRight">
+                    <p class="deskAside">At lumière we provide superior customer service, with a commitment to deliver distinctive products of the highest quality. Our trainers and promotional items communicate a classic, retro influence. Keeping a watchful eye on trends and styles, our in-house graphic designers work to create a unique company, group or team identity – one that sets you apart from the rest.</p>
+                    <p class="extraAbout" class="deskAside">We are proud of our exlusive range of trainers with limited edition lines to compete with all the top brands in the world.</p>
+                    <p class="extraAbout" class="deskAside">Our Premier Delivery service is one of the best delivery services available online and the most affordable.</p>
+                </li>
+            </ul>
         </div>
     </section>
     <!--ABOUT SECTION End-->
     <hr>
+
     <!--CONTACT SECTION Start-->
-    <div id="contactShoe">
     <section id="contact">
         <div id="contactBack">
 
             <h1>CONTACT</h1>
             <h2>Get in touch with us via our contact form, email or phone number.</h2>
-                <button id="phoneB"><a href="#">0208 488 3444</a> </button>
-                <button id="emailB"><a href="#">Email Us</a> </button>
+            <div id="contactElements">
+                <ul id="contactPos">
+                    <div id="contactDLft">
+                        <div id="contactFlRev">
+                            <li class="contactButs"><button id="phoneB"><a href="#">0208 488 3444</a> </button></li>
+                            <li class="contactButs"><button id="emailB"><a href="#">Email Us</a> </button></li>
+                        </div>
+                        <li id="contactAddress">
+                            <div id="address">
+                                <span id="mainAd">Main Office</span><br><span id="italicsAd">Lumière<br>2nd Floor<br>St. Clare House<br>30-33 Minories<br>London EC3N 1DD</span>
+                            </div>
+                        </li>
+                    </div>
+                    <li id="messageFormL">
+                        <div id="messageForm">
+                            <form>
+                                Name<br>
+                                <input type="text" />
+                            </form>
+                            <form>
+                                Email<br>
+                                <input type="text" />
+                            </form>
+                            <form id="message">
+                                Message<br>
+                                <input type="text" />
+                            </form>
 
-                <div id="address">
-                    <span id="mainAd">Main Office</span><br><span id="italicsAd">Lumière<br>2nd Floor<br>St. Clare House<br>30-33 Minories<br>London EC3N 1DD</span>
-                </div>
-                <div id="messageForm">
-                    <form>
-                        Name<br>
-                        <input type="text" />
-                    </form>
-                    <form>
-                        Email<br>
-                        <input type="text" />
-                    </form>
-                    <form id="message">
-                        Message<br>
-                        <input type="text" />
-                    </form>
-                    <button id="sendM"><a href="#">SEND MESSAGE</a> </button>
-                </div>
+                            <button id="sendM"><a href="#">SEND MESSAGE</a> </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          <div id="mobileMap">
+              <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.9972167594246!2d0.03402929936326703!3d51.43984499618136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a98f9488d8f3%3A0xf46bc8428ce0882b!2sMottingham+Farm+Riding+Centre!5e0!3m2!1sen!2suk!4v1530451698553" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <img src="resources/img/blackOverlay.jpg" />
+            
+<!-- Will use a javascript plugin to do this better later -->
             <footer id="botLinks">
                 <div id="linkCol">
-                    <i class="fab fa-linkedin-in"><a href="#"> </a> </i>
-                    <i class="fab fa-twitter"><a href="#"> </a> </i>
-                    <i class="fab fa-facebook-f"><a href="#"> </a> </i>
-                    <i class="fab fa-instagram"><a href="#"> </a> </i>
+                    <div class="iconW"><i class="fab fa-linkedin-in"><a href="#"> </a> </i></div>
+                    <div class="iconW"><i class="fab fa-twitter"><a href="#"> </a> </i></div>
+                    <div class="iconW"><i class="fab fa-facebook-f"><a href="#"> </a> </i></div>
+                    <div class="iconW"><i class="fab fa-instagram"><a href="#"> </a> </i></div>
                 </div>
+                <p id="copyright"> &copy; 2017 lumière</p>
             </footer>
-
-            <p id="copyright"> &copy; 2017 lumière</p>
+</div>
+            
         </div>
     </section>
-    </div>
     <!--CONTACT SECTION End-->
 
 

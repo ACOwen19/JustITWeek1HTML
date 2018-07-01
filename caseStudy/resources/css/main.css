@@ -37,15 +37,12 @@ h2 {
 h1 {
     font-size: 1.5em;
     text-transform: uppercase;
-    padding-top: 1vh;
 }
 
 h2 {
     font-size: 1.1em;
     margin: 0 5vw;
 }
-
-
 
 button a {
     color: rgb(255, 255, 255);
@@ -142,7 +139,6 @@ video {
 
 
 #arrivalBC {
-    /*    top: 90vh;*/
     bottom: 0;
 }
 
@@ -162,13 +158,13 @@ video {
     text-transform: uppercase;
     text-align: center;
     text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255), 0 0 20px rgb(255, 0, 128), 0 0 30px rgb(255, 0, 128), 0 0 40px rgb(255, 0, 128), 0 0 55px rgb(255, 0, 128), 0 0 75px rgb(255, 0, 128);
+    /* adds neon effect */
 }
 
 
 /*NAVIGATION SECTION*/
 
 #logo {
-    position: absolute;
     top: 5px;
     left: 10px;
     z-index: 105;
@@ -195,9 +191,8 @@ video {
 
 #basketIcon {
     width: 50%;
-    margin: 0 25%;
-    /* Setting width to 60% and margin to 0 20% allows us to maintain the effct of width 100% to places the basket in the middle while also leaving space on either side to allow the logo and menu to be clicked. this is required becayse menu is contained in nav which has a lower z-index than basket by necessity*/
-    position: absolute;
+    margin: 2px 25% 0 25%;
+    /* Setting width to 50% and margin to 2px 25% 0 25% allows us to maintain the effct of width 100% to places the basket in the middle while also leaving space on either side to allow the logo and menu to be clicked. this is required because menu is contained in nav which has a lower z-index than basket by necessity. The 2px bumps it down slightly to be better aligned*/
     top: 5px;
     text-align: center;
     z-index: 101;
@@ -220,18 +215,18 @@ video {
 #menuIcon {
     font-size: 3em;
     display: block;
-    /*review in future*/
-    margin: 0 0 0 80vw;
+    width: 20%;
+    margin: 0 5% 0 75%;
     z-index: 105;
-    /*    background-color: rgb(28, 8, 28);*/
+    color: rgb(255, 255, 255);
+    background-color: rgb(28, 8, 28);
+    background-size: contain;
+    overflow-y: hidden;
+    text-align: center;
+    text-decoration: none;
+
     /* em sizing is for accessability, 1 em is equivalent to whatever the default font size is for the page, in this case, 16px (see body) 2em is 2x that & so on */
     /* Span is an inline element, therefore don't need to change the position, jus the margin */
-}
-
-#menuIcon a {
-    color: rgb(255, 255, 255);
-
-    text-decoration: none;
 }
 
 /*This is styling for our 3 line symbol*/
@@ -270,44 +265,26 @@ nav li {
 
 .trainers {
     display: flex;
-    /* display:flex unlocks flext declarations */
+    /*display:flex unlocks flext declarations */
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    width: 100%;
+    width: 90%;
+    margin: 0 5%;
     height: auto;
 }
 
-/*
-figure img {
-    margin: 0 auto;
-    display: block;
-}
-*/
-
 .productC {
-    /*    flex-grow: 1;*/
-    /*    margin: 1%;*/
-    text-align: center;
     width: 100%;
-    /*    width: 220px;*/
 }
 
-
-/*
-.productC figcaption{
-    min-height: 75px
-}
-*/
-
-/*setting min height of fig caption so that the button will always align*/
 
 figcaption span {
     display: block;
     font-weight: bold;
 }
 
-/*ensuring that
+/*Makes the prices bold*/
 
 /*PRODUCTS/SALES Button Element Styling*/
 
@@ -369,13 +346,21 @@ figcaption span {
     margin: 10px;
 }
 
+.loginForm {
+    padding: 0;
+}
+
+.formTitle {
+    margin-bottom: 0;
+}
+
 #accountBC {
     margin: 2vh 0;
 }
 
 .accountB {
     color: rgb(255, 255, 255);
-    margin: 0 auto;
+    margin: 0 1vw;
     display: inline;
     padding: 10px 15px;
     background-color: rgb(53, 38, 80);
@@ -390,8 +375,14 @@ figcaption span {
     text-align: center;
 }
 
+
 #vidText {
-    margin: 0 10vw;
+    margin: 2vw 10vw;
+}
+
+#deskShift {
+    list-style: none;
+    padding: 0;
 }
 
 .extraAbout {
@@ -401,7 +392,7 @@ figcaption span {
 /*CONTACT STYLES*/
 
 #contactShoe {
-   background-image: url(../img/trainerContactBackground.jpg);
+    background-image: url(../img/trainerContactBackground.jpg);
     background-position: center 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -411,26 +402,31 @@ figcaption span {
 }
 
 #contact {
-/*
+
     background-image: url(../img/trainerContactBackground.jpg);
     background-position: center 0;
     background-size: cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
-*/
-
     text-align: center;
     color: rgb(255, 255, 255);
 
 }
 
+#contactElements {
+    margin-top: 2vw;
+}
+
 #contactBack {
     background-color: rgba(0, 0, 0, 0.6);
     overflow-y: hidden;
+    z-index: 5;
 }
 
-#contact h1 {
-    padding-top: 10vh;
+
+#contactPos {
+    list-style: none;
+    padding: 0;
 }
 
 #phoneB {
@@ -492,7 +488,7 @@ figcaption span {
 }
 
 #message input {
-    height: 15vh;
+    height: 20vh;
 }
 
 #sendM {
@@ -508,18 +504,60 @@ figcaption span {
 
 
 #botLinks {
-    background-color: rgb(17, 14, 23) !important;
+    display: block;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    background-color: rgb(0, 0, 0) !important;
     width: 100%;
-    padding: 3vh 0;
+    z-index: 100;
+}
+
+#botLinks i {
+    font-size: 2em;
+    letter-spacing: 1vw;
+}
+
+.iconW {
+    display: inline-block;
+    width: 64px;
 }
 
 #linkCol {
     color: rgb(183, 154, 246);
+    padding: 3vh 0;
 }
+
+#map {
+    position: absolute;
+    z-index: -1000;
+    bottom;
+    0 right: 0;
+}
+
+#mobileMap {
+    position: relative;
+    display: block;
+    text-align: left;
+    height: 600px;
+    width: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#mobileMap img {
+    position: absolute;
+    bottom;
+    0 right: 0;
+    opacity: .6;
+}
+
+
 
 #copyright {
     display: none;
 }
+
 
 /* -------------*********------------*/
 
@@ -536,56 +574,75 @@ figcaption span {
 
 }
 
-    /*TABLET 768px & ABOVE*/
-    @media screen and (min-width: 768px) {
+/*TABLET 768px & ABOVE*/
+
+@media screen and (min-width: 768px) {
 
 
-        #exclTr {
-            top: 80vh;
-            left: 75vw;
-        }
-
-        #ltdEd,
-        #arrivalBC {
-            width: auto;
-        }
-
-        #ltdEd {
-            top: 90vh;
-            left: 75vw;
-            text-align: right;
-        }
-
-
-        #arrivalBC {
-            left: 77vw;
-            margin: auto;
-        }
-
-
-        .productC {
-            width: 33%;
-        }
-
-        .extraAbout {
-            display: inherit;
-        }
-
-        #messageForm {
-            padding: 0 3% 0 1%;
-        }
-        .productC figcaption {
-            min-height: 75px
-        }
-
-        .productC figure {
-            margin-bottom: 0;
-        }
-
-        .formStack {
-            display: none;
-        }
+    #exclTr {
+        top: 80vh;
+        left: 75vw;
     }
+
+    #ltdEd,
+    #arrivalBC {
+        width: auto;
+    }
+
+    #ltdEd {
+        top: 88vh;
+        left: 75vw;
+        text-align: right;
+    }
+
+
+    #arrivalBC {
+        left: 77vw;
+        margin: auto;
+    }
+
+
+    .productC {
+        width: 33%;
+    }
+
+    .extraAbout {
+        display: inherit;
+    }
+
+    #messageForm {
+        padding: 0 3% 0 1%;
+    }
+    .productC figcaption {
+        min-height: 75px
+    }
+    /*setting min height of fig caption so that the button will always horizontally align. Doing this here as its not relevent at lower screen sizes where the pictures are displayed one on top of eachother*/
+    .productC figure {
+        margin-bottom: 0;
+    }
+
+    #userLogin {
+        width: 98%;
+        margin: 0 1%;
+    }
+
+    .loginForm {
+        display: flex;
+        justify-content: center;
+    }
+
+    .loginEnt {
+        flex-direction: row;
+        display: flex;
+    }
+
+    .formTitle {
+        margin: .5vh 0;
+        padding-right: .5vw;
+    }
+
+    
+}
 
 
 /* DESKTOP 1024px & ABOVE*/
@@ -699,99 +756,83 @@ figcaption span {
 
     #cartDrop {
         display: inherit;
+        width: 75%;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
     }
 
+    #userLogin {
+        width: 75%;
+        margin: 0 12.5%;
+    }
+
+    #deskShift {
+        display: flex;
+        margin: 1vh 0 0 0;
+    }
 
     .deskAside {
+        margin-top: 0;
+    }
+
+    #vidLeft {
+        margin: 0 5px;
 
     }
 
-    #vidLeft{
-        float: left;
-        width: 50%;
-        height: auto;
-    }
-
-    #textRight{
-        float: right;
-        width: 50%;
-        height: auto;
-    }
-
-    .floatEn {
-        clear: both;
-    }
-
-
-/*
-
-    #contactShoe {
-        position: relative;
-        height: 100vh;
-    }
-*/
-/*
-
-    #contactBack {
-        position: relative;
-        height: 100vh;
-    }
-*/
-
-
-    #messageForm {
-        position: absolute;
-        top: 20vh;
-        left: 40vw;
-        width: 50vw;
-    }
-
-    #messageForm input {
-        margin: 1vh 0 3vh 0
-    }
-
-    #sendM {
-        margin: 0 auto;
-    }
-*/
-
-    /*
-    #sendM {
-        position: absolute;
-        top: 60vh;
-    }
-*/
-/*
-    #address {
-        position: absolute;
-        top: 20vh;
-        left: 20vw;
+    #textRight {
+        margin: 0 5px;
         text-align: left;
     }
 
-    #address p {
-        margin: 0;
+    #contactPos {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #contactDLft {
+        flex-direction: column-reverse;
+        display: flex;
+        margin: 0 0 0 5vw;
+    }
+
+    #contactDLft li {
+        flex: 0 0 auto;
+    }
+
+    #contactFLRev {
+        flex-direction: column-reverse;
+        display: flex;
+    }
+
+
+    #messageFormL {
+        flex-grow: 1;
+        margin: 0 5vw;
+        flex-direction: row;
+
+    }
+
+    .contactButs {
+        align-self: baseline;
+        text-align: left;
     }
 
     #emailB {
-        position: absolute;
-        top: 57vh;
-        left: 20vw
+        margin-left: 0;
     }
 
-    #phoneB {
-        position: absolute;
-        top: 50vh;
-        left: 20vw
+    #contactAddress {
+        align-self: baseline;
+        text-align: left;
     }
-*/
 
-    #botLinks {
-        position: absolute;
-        bottom: 0;
+    #copyright {
+        display: inherit;
 
     }
 }
+
 
 /* DESKTOP 1280px & ABOVE*/
 
@@ -820,17 +861,4 @@ figcaption span {
     }
 
 
-    /*
-    #logo{
-        display: none;
-    }
-
-    #exclTr{
-        display: none;
-    }
-
-    #arrivalB{
-        display: none;
-    }
-*/
 }
