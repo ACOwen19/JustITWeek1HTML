@@ -311,11 +311,9 @@ figcaption span {
 
 /* For unicode don't use the U+ if there is one and wrap it in "\"*/
 
-.floatEn {
-    display: none;
-}
-
 /*SALES STYLES*/
+
+/* Styling for the drag/drop & account login */
 
 #cartDrop {
     border: 1px solid rgb(216, 205, 242);
@@ -391,16 +389,6 @@ figcaption span {
 
 /*CONTACT STYLES*/
 
-#contactShoe {
-    background-image: url(../img/trainerContactBackground.jpg);
-    background-position: center 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow-y: hidden;
-    width: 100%;
-    height: auto;
-}
-
 #contact {
 
     background-image: url(../img/trainerContactBackground.jpg);
@@ -428,6 +416,8 @@ figcaption span {
     list-style: none;
     padding: 0;
 }
+
+/* Contact Button Styling */
 
 #phoneB {
     color: rgb(255, 255, 255);
@@ -465,6 +455,8 @@ figcaption span {
     color: rgb(183, 154, 246);
 }
 
+/*Address Styling*/
+
 #mainAd {
     line-height: 3;
 }
@@ -473,6 +465,8 @@ figcaption span {
     font-style: italic;
     line-height: 2;
 }
+
+/*Message Styling*/
 
 #messageForm {
     text-align: left;
@@ -503,6 +497,8 @@ figcaption span {
 }
 
 
+/*Footer Styling*/
+
 #botLinks {
     display: block;
     position: absolute;
@@ -528,6 +524,12 @@ figcaption span {
     padding: 3vh 0;
 }
 
+#copyright {
+    display: none;
+}
+
+/*Map Styling*/
+
 #map {
     position: absolute;
     z-index: -1000;
@@ -550,12 +552,6 @@ figcaption span {
     bottom;
     0 right: 0;
     opacity: .6;
-}
-
-
-
-#copyright {
-    display: none;
 }
 
 
@@ -641,7 +637,7 @@ figcaption span {
         padding-right: .5vw;
     }
 
-    
+
 }
 
 
